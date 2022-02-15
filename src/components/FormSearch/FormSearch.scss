@@ -1,0 +1,21 @@
+.search__container {
+  margin: 5vh 0 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__search {
+  width: 50%;
+}
+
+.input__search {
+  width: 90%;
+  height: 5vh;
+}
+
+.btn__search {
+  width: 10%;
+  height: 5vh;
+}
