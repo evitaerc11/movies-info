@@ -13,10 +13,17 @@
   color: $font-primary;
   font-size: 20px;
   font-weight: 600;
+  outline: none;
+  border: none;
 }
 
 .user-image,
 .user-image img {
   width: 38px;
   height: 38px;
+}
+
+a {
+  color: unset !important;
+  text-decoration: none !important;
 }

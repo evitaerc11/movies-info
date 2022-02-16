@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { fetchAsyncSearch } from '../../features/movies/movieSlice'
+// import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+// import { fetchAsyncSearch } from '../../features/movies/movieSlice'
 
 import './FormSearch.scss'
 
 const FormSearch = () => {
   const [text, setText] = useState('')
 
-  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  // const dispatch = useDispatch()
 
   const handleTextChange = (e) => {
     setText(e.target.value)
@@ -15,7 +18,8 @@ const FormSearch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch(fetchAsyncSearch(text))
+    // dispatch(fetchAsyncSearch(text))
+    navigate(`/search/title/${text}`)
     setText('')
   }
 

@@ -56,11 +56,12 @@ export const fetchAsyncDetails = createAsyncThunk(
 
 export const fetchAsyncSearch = createAsyncThunk(
   'movies/fetchAsynSearch',
-  async (title) => {
+  async (data) => {
     try {
       const res = await movieApi('/', {
         params: {
-          s: title,
+          s: data.title,
+          page: data.page,
           type: 'movie'
         }
       })
